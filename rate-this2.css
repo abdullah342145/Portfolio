@@ -1,0 +1,40 @@
+body{
+
+    background-color: #f7f6f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    }
+
+    .card{
+
+    width: 350px;
+    border: none;
+    box-shadow: 5px 6px 6px 2px #e9ecef;
+    border-radius: 12px;
+    }
+
+    .circle-image img{
+
+    border: 6px solid #fff;
+    border-radius: 100%;
+    padding: 9px;
+    top: -28px;
+    position: relative;
+    width: 65px;
+    height: 65px;
+    border-radius: 100%;
+    z-index: 1;
+    background: #e7d184;
+    cursor: pointer;
+    }
+
+    .help-text{
+    margin-top: -21px;
+    }
+
+
+    .fw-500{
+    font-weight: 500 !important;
+    }

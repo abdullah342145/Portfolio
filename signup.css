@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    background-color: #3498db;
+    border-radius: 50%;
+    position: absolute;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+/* Circle 1 - Top Left to Center */
+#circle1 {
+    top: -50px;
+    left: -50px;
+    animation-name: moveCircle1;
+    animation-delay: 0.2s;
+}
+
+/* Circle 2 - Top Right to Center */
+#circle2 {
+    top: -50px;
+    right: -50px;
+    animation-name: moveCircle2;
+    animation-delay: 0.4s;
+}
+
+/* Circle 3 - Bottom Left to Center */
+#circle3 {
+    bottom: -50px;
+    left: -50px;
+    animation-name: moveCircle3;
+    animation-delay: 0.6s;
+}
+
+/* Circle 4 - Bottom Right to Center */
+#circle4 {
+    bottom: -50px;
+    right: -50px;
+    animation-name: moveCircle4;
+    animation-delay: 0.8s;
+}
+
+/* Keyframes for Circle 1 */
+@keyframes moveCircle1 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(calc(50vw - 25px), calc(50vh - 25px)) scale(5);
+    }
+}
+
+/* Keyframes for Circle 2 */
+@keyframes moveCircle2 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(calc(-50vw + 25px), calc(50vh - 25px)) scale(5);
+    }
+}
+
+/* Keyframes for Circle 3 */
+@keyframes moveCircle3 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(calc(50vw - 25px), calc(-50vh + 25px)) scale(5);
+    }
+}
+
+/* Keyframes for Circle 4 */
+@keyframes moveCircle4 {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    100% {
+        transform: translate(calc(-50vw + 25px), calc(-50vh + 25px)) scale(5);
+    }
+}
+
+/* Form Container Styling */
+.form-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 2;
+    position: absolute;
+    opacity: 0;
+    animation: showForm 2s ease-out 1 forwards;
+    animation-delay: 2s;
+}
+
+/* Animation for showing the form */
+@keyframes showForm {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+input {
+    width: 50%;
+    margin: 0px auto;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-bottom:2px solid #3498db;
+    margin-top: 10px;
+}
+
+button {
+    width: 50%;
+    margin: 0px auto;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+span {
+    color: #3498db;
+    cursor: pointer;
+}
+
+span:hover {
+    text-decoration: underline;
+}
